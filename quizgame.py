@@ -42,6 +42,11 @@ for question in questions:
         print(f"Incorrect. The correct answer is {answers[question_num]}")
 
     question_num += 1
+quiz_num = int(len(answers))
+final_score = int((score / quiz_num) * 100)
+print(f"The correct answers were: {answers}")
+print(f"You wrote: {guesses}")
+print((f"Your score is: {final_score}%."))
 
 print("Thanks for playing, Byee")
 
