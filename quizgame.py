@@ -28,7 +28,7 @@ for question in questions:
         print(choice)
     print()
 
-    guess = input("Enter: A, B, C, or D: ").upper()
+    guess = input("Enter: A, B, C, or D: ").upper() 
 
     guesses.append(guess)
     if guess == answers[question_num]:
