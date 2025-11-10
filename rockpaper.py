@@ -1,24 +1,33 @@
 import random
 
 options = ("rock", "paper", "scissors")
-player = None
-computer = random.choice(options)
 
-while player not in options:
-    player = input("Enter a choice: (rock, paper, scissors): ").lower()
+running = True
 
-if player == computer:
-    print("Its a tie.")
+while running:
+    player = None
+    computer = random.choice(options)
 
-elif player == "paper" and computer == "rock":
-    print("You win!")
+    while player not in options:
+        player = input("Enter a choice: (rock, paper, scissors): ").lower()
 
-elif player == "rock" and computer == "scissors":
-    print("You win!")
+    if player == computer:
+        print("Its a tie.")
 
-elif player == "scissors" and computer == "paper":
-    print("You win!")
+    elif player == "paper" and computer == "rock":
+        print("You win!")
 
-else:
-    print(f"You lose! {computer} beats {player}")
+    elif player == "rock" and computer == "scissors":
+        print("You win!")
+
+    elif player == "scissors" and computer == "paper":
+        print("You win!")
+
+    else:
+        print(f"You lose! {computer} beats {player}")
+
+    if not input("Play again? (y/n): ").lower() == "y":
+        running = False
+
+print("Thanks for playing.")
 
